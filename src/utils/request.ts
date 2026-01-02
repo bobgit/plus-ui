@@ -49,6 +49,7 @@ service.interceptors.request.use(
     // get请求映射params参数
     if (config.method === 'get' && config.params) {
       let url = config.url + '?' + tansParams(config.params);
+      console.info('请求的url为:', url);
       url = url.slice(0, -1);
       config.params = {};
       config.url = url;
