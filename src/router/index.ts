@@ -48,6 +48,12 @@ export const constantRoutes: RouteRecordRaw[] = [
     hidden: true
   },
   {
+    path: '/address',
+    component: () => import('@/views/system/addresses/index.vue'),
+    hidden: true,
+    meta: { title: '地址管理' }
+  },
+  {
     path: '/register',
     component: () => import('@/views/register.vue'),
     hidden: true
