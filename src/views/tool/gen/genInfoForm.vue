@@ -7,6 +7,7 @@
           <el-select v-model="infoForm.tplCategory" @change="tplSelectChange">
             <el-option label="单表（增删改查）" value="crud" />
             <el-option label="树表（增删改查）" value="tree" />
+            <el-option label="手机展示" value="phone" />
           </el-select>
         </el-form-item>
       </el-col>

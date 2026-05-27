@@ -83,3 +83,17 @@ npm run build:prod
 | ![输入图片说明](https://foruda.gitee.com/images/1680078982294090567/b31c343d_1766278.png '屏幕截图') | ![输入图片说明](https://foruda.gitee.com/images/1680079000642440444/77ca82a9_1766278.png '屏幕截图') |
 | ![输入图片说明](https://foruda.gitee.com/images/1680079020995074177/03b7d52e_1766278.png '屏幕截图') | ![输入图片说明](https://foruda.gitee.com/images/1680079039367822173/76811806_1766278.png '屏幕截图') |
 | ![输入图片说明](https://foruda.gitee.com/images/1680079274333484664/4dfdc7c0_1766278.png '屏幕截图') | ![输入图片说明](https://foruda.gitee.com/images/1680079290467458224/d6715fcf_1766278.png '屏幕截图') |
+
+
+docker run -d --name ruoyi-server -p 8080:8080 -e SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/ruoyi -e SPRING_REDIS_HOST=host.docker.internal -e SPRING_REDIS_PORT=6379  ruoyi/ruoyi-server:5.5.3
+
+
+docker run -d --name ruoyi-server -p 8080:8080 -e "DB_URL=jdbc:postgresql://host.docker.internal:5432/ry_bob?reWriteBatchedInserts=true&stringtype=unspecified" -e DB_USERNAME=postgres -e DB_PASSWORD=123456 -e SPRING_REDIS_HOST=host.docker.internal -e MINIO_URL=http://172.17.0.2:9000 -e MINIO_ACCESS_KEY=minioadmin -e MINIO_SECRET_KEY=minioadmin ruoyi/ruoyi-server:5.5.3
+
+
+docker run -d --name ruoyi-server -p 8080:8080 -e "DB_URL=jdbc:postgresql://host.docker.internal:5432/ry_bob?reWriteBatchedInserts=true&stringtype=unspecified" -e DB_USERNAME=postgres -e DB_PASSWORD=123456 -e SPRING_REDIS_HOST=host.docker.internal -e MINIO_URL=http://172.17.0.2:9000 -e MINIO_ROOT_USER=minioadmin -e MINIO_ROOT_PASSWORD=minioadmin ruoyi/ruoyi-server:5.5.3
+
+
+127.0.0.1:9000
+
+172.17.0.2:9000
